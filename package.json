@@ -1,0 +1,55 @@
+{
+  "name": "conversor-unidades",
+  "version": "1.0.0",
+  "description": "Conversor de unidades de engenharia",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron:dev": "concurrently \"set BROWSER=none&&npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "build": {
+    "appId": "com.conversor.unidades",
+    "productName": "Conversor de Unidades",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "dependencies": {
+    "mathjs": "^11.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.0",
+    "electron": "^25.3.0",
+    "electron-builder": "^24.4.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.3.2",
+    "wait-on": "^7.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
